@@ -16,7 +16,7 @@ import tat.mukhutdinov.mvvm.core.theme.MvvmTheme
 @Composable
 fun Form(
     modifier: Modifier = Modifier,
-    formViewModel: FormViewModel = viewModel(),
+    formViewModel: FormViewModel = viewModel(factory = FormViewModel.Factory),
 ) {
     Column(
         modifier = modifier.padding(horizontal = 16.dp),

@@ -19,7 +19,7 @@ import tat.mukhutdinov.mvvm.form.ui.FormViewModel
 fun AbPoints(
     modifier: Modifier = Modifier,
     abPointViewModel: AbPointViewModel = viewModel(factory = AbPointViewModel.Factory),
-    formViewModel: FormViewModel = viewModel(),
+    formViewModel: FormViewModel = viewModel(factory = FormViewModel.Factory),
 ) {
     val points by abPointViewModel.points.collectAsStateWithLifecycle()
     val price by abPointViewModel.price.collectAsStateWithLifecycle()

@@ -17,7 +17,7 @@ import tat.mukhutdinov.mvvm.form.ui.FormViewModel
 fun Map(
     modifier: Modifier = Modifier,
     mapViewModel: MapViewModel = viewModel(factory = MapViewModel.Factory),
-    formViewModel: FormViewModel = viewModel(),
+    formViewModel: FormViewModel = viewModel(factory = FormViewModel.Factory),
 ) {
     val isSearchingRide by formViewModel.isSearchingRide.collectAsStateWithLifecycle()
     val availableCars by mapViewModel.availableCars.collectAsStateWithLifecycle()
